@@ -37,12 +37,12 @@ namespace Anketa_01._01__1_.pages
                     {
                         case 1:
                             MessageBox.Show("Вы вошли как администратор");
-                            User.frmMain.Navigate(new Page4(currentUser));
+                            User.frmMain.Navigate(new List());
                             break;
                         case 2:
                         default:
                             MessageBox.Show("Вы вошли как обычный пользователь");
-                            User.frmMain.Navigate(new List());
+                            User.frmMain.Navigate(new Page4(currentUser));
                             break;
                     }
                 }
@@ -60,6 +60,11 @@ namespace Anketa_01._01__1_.pages
         private void btnReg_Click(object sender, RoutedEventArgs e)
         {
             User.frmMain.Navigate(new Page1());
+        }
+
+        private void txtLogin_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
